@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import GlassesApp from './GlassesApp';
+import GlassesApp from './components/GlassesApp';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

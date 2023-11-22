@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import './App.css';
-let arrGlasses = [
+import GlassesList from "./GlassesList";
+import Models from "./Models";
+let data = [
   {
     id: 1,
     price: 30,
@@ -68,30 +69,11 @@ let arrGlasses = [
 
 export default class GlassesApp extends Component {
   render() {
-    let {arrGlasses} = this.props;
 
     return (
-      <div className="container">
-        <h1>Virtual Try-On</h1>
-        <div className="w-25 mx-auto">
-        <div className="card">
-          <img src="./glassesImage/model.jpg" alt="" className="w-100"/>
-          <div className="card-body">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        </div>
-        <div className="mx-auto">
-          <h2>Choose Glasses:</h2>
-          <img
-            classname="glasses-thumbnail"
-            src={this.url}
-            alt="Glasses 1"
-            height={150}
-          />
-          
-        </div>
+      <div className="container mt-5">
+        <Models/>
+       <GlassesList arrGlasses = {data}/>
       </div>
     );
   }
